@@ -8,7 +8,7 @@ document.getElementById("names").innerHTML =
 
 document.getElementById("action").onclick = function () {
   document.getElementById("result").innerHTML =
-    "And the winner is: <strong>" +
+    "And the winner is:<br /><strong>" +
     names[Math.floor(Math.random() * names.length)] +
-    "</strong>!";
+    "!</strong>";
 };

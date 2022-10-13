@@ -10,7 +10,7 @@ body {
 }
 .container {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 10rem 10rem;
   grid-template-rows: 50% 50%;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -23,14 +23,26 @@ body {
   grid-area: cta;
 }
 
-.result2 {
-  grid-area: result2;
+.result {
+  grid-area: result;
 }
 
 .names {
   grid-area: names;
 }
 
-button {
+.cta button {
+  background: #ff5db1;
+  background: -moz-linear-gradient(top, #ff5db1 0%, #ef017c 100%);
+  background: -webkit-linear-gradient(top, #ff5db1 0%, #ef017c 100%);
+  background: linear-gradient(to bottom, #ff5db1 0%, #ef017c 100%);
   border: 0;
+  color: #fff;
+  font-size: larger;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.result strong {
+  font-size: xx-large;
 }
