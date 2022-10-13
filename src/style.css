@@ -1,22 +1,40 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("../assets/OpenSans-VariableFont_wdth,wght.ttf")
+    format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
 body {
+  align-items: center;
   background: #6e28d9;
-  padding: 0 24px;
-  margin: 0;
-  height: 100vh;
   color: white;
   display: flex;
+  font-family: "OpenSans", sans-serif;
+  font-size: larger;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
+  margin: 0;
+  padding: 0 24px;
 }
 .container {
   display: grid;
-  grid-template-columns: 10rem 10rem;
+  grid-template-columns: 20rem 10rem;
   grid-template-rows: 50% 50%;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "cta names"
     "result names";
+}
+
+.container > div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .cta {
@@ -32,17 +50,29 @@ body {
 }
 
 .cta button {
-  background: #ff5db1;
   background: -moz-linear-gradient(top, #ff5db1 0%, #ef017c 100%);
   background: -webkit-linear-gradient(top, #ff5db1 0%, #ef017c 100%);
+  background: #ff5db1;
   background: linear-gradient(to bottom, #ff5db1 0%, #ef017c 100%);
   border: 0;
   color: #fff;
-  font-size: larger;
-  padding: 0.5rem;
   cursor: pointer;
+  font-size: larger;
+  height: 4rem;
+  padding: 0.5rem 1rem;
+  width: 14rem;
 }
 
-.result strong {
+.result div:last-child {
   font-size: xx-large;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.names ul {
+  padding: 0;
+}
+
+.names ul li {
+  list-style: none;
 }
