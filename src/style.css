@@ -1,0 +1,36 @@
+body {
+  background: #6e28d9;
+  padding: 0 24px;
+  margin: 0;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "cta names"
+    "result names";
+}
+
+.cta {
+  grid-area: cta;
+}
+
+.result2 {
+  grid-area: result2;
+}
+
+.names {
+  grid-area: names;
+}
+
+button {
+  border: 0;
+}
