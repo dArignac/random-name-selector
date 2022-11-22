@@ -1,10 +1,28 @@
 const params = new URLSearchParams(document.location.search).get("names");
 let names = ["Dieter", "Harald", "Gustav", "Ronny", "Tina", "Sindy", "Ursula"];
+
 if (params != null) {
   names = params.split(",");
 }
-document.getElementById("names").innerHTML =
-  "<ul><li>" + names.join("</li><li>") + "</li></ul>";
+
+function generateParticipantList() {
+  let out = "<ul>";
+  for (let i = 0; i < names.length; i++) {
+    let reducedNames = Array.from(names);
+    reducedNames.splice(names.indexOf(names[i]), 1);
+    out +=
+      "<li><a href=" +
+      window.location.origin +
+      "?names=" +
+      reducedNames.join(",") +
+      "><i class='icon-remove'></i></a>" +
+      names[i] +
+      "</li>";
+  }
+  return out + "</ul>";
+}
+
+document.getElementById("names").innerHTML = generateParticipantList();
 
 document.getElementById("action").onclick = function () {
   document.getElementById("result").innerHTML =
