@@ -5,6 +5,8 @@ if (params != null) {
   names = params.split(",");
 }
 
+names.sort();
+
 function generateParticipantList() {
   let out = "<ul>";
   for (let i = 0; i < names.length; i++) {
