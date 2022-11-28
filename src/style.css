@@ -1,18 +1,9 @@
-@font-face {
-  font-family: "OpenSans";
-  src: url("../assets/OpenSans-VariableFont_wdth,wght.ttf")
-    format("woff2-variations");
-  font-weight: 125 950;
-  font-stretch: 75% 125%;
-  font-style: normal;
-}
-
 body {
   align-items: center;
   background: #6e28d9;
   color: white;
   display: flex;
-  font-family: "OpenSans", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: larger;
   height: 100vh;
   justify-content: center;
@@ -83,9 +74,20 @@ a:visited {
 }
 
 .names ul li {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 22px;
+  gap: 6px;
   list-style: none;
 }
 
-.names ul li a {
-  padding-right: 10px;
+.names ul li div a {
+  margin: 0;
+  padding: 0;
+}
+
+.names ul li div a img {
+  height: 14px;
+  width: 14px;
 }
