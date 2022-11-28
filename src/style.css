@@ -74,9 +74,20 @@ a:visited {
 }
 
 .names ul li {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 22px;
+  gap: 6px;
   list-style: none;
 }
 
-.names ul li a {
-  padding-right: 10px;
+.names ul li div a {
+  margin: 0;
+  padding: 0;
+}
+
+.names ul li div a img {
+  height: 14px;
+  width: 14px;
 }

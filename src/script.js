@@ -12,14 +12,13 @@ function generateParticipantList() {
   for (let i = 0; i < names.length; i++) {
     let reducedNames = Array.from(names);
     reducedNames.splice(names.indexOf(names[i]), 1);
-    out +=
-      "<li><a href=" +
-      window.location.origin +
-      "?names=" +
-      reducedNames.join(",") +
-      "><i class='icon-remove'></i></a>" +
-      names[i] +
-      "</li>";
+    out += `<li><div><a href="${
+      window.location.origin
+    }?names=${reducedNames.join(
+      ","
+    )}"><img src="assets/remove.svg" alt="Remove" /></a></div><div>${
+      names[i]
+    }</div></li>`;
   }
   return out + "</ul>";
 }
