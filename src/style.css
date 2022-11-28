@@ -1,18 +1,9 @@
-@font-face {
-  font-family: "OpenSans";
-  src: url("../assets/OpenSans-VariableFont_wdth,wght.ttf")
-    format("woff2-variations");
-  font-weight: 125 950;
-  font-stretch: 75% 125%;
-  font-style: normal;
-}
-
 body {
   align-items: center;
   background: #6e28d9;
   color: white;
   display: flex;
-  font-family: "OpenSans", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: larger;
   height: 100vh;
   justify-content: center;
