@@ -23,6 +23,7 @@ function generateParticipantList() {
 }
 
 document.getElementById("names").innerHTML = generateParticipantList();
+document.getElementById("base-url").innerHTML = loc;
 
 document.getElementById("action").onclick = function () {
   document.getElementById("result").innerHTML =
