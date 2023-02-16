@@ -12,14 +12,14 @@ if (params != null) {
 names.sort();
 
 function generateParticipantList() {
-  let out = "<ul>";
+  let out = "";
   for (let i = 0; i < names.length; i++) {
     let reducedNames = Array.from(names);
     reducedNames.splice(names.indexOf(names[i]), 1);
     const reducedParams = reducedNames.join(",");
-    out += `<li><div><a href="${loc}?names=${reducedParams}"><img src="${imgRemove}" alt="Remove" /></a></div><div>${names[i]}</div></li>`;
+    out += `<div><div><a href="${loc}?names=${reducedParams}"><img src="${imgRemove}" alt="Remove" /></a></div><div>${names[i]}</div></div>`;
   }
-  return out + "</ul>";
+  return out;
 }
 
 document.getElementById("names").innerHTML = generateParticipantList();

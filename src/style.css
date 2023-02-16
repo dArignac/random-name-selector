@@ -2,11 +2,9 @@ body {
   align-items: center;
   background: #6e28d9;
   color: white;
-  display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: larger;
   height: 100vh;
-  justify-content: center;
   margin: 0;
   padding: 0 24px;
 }
@@ -19,34 +17,14 @@ a:visited {
   text-decoration: none;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 20rem 10rem;
-  grid-template-rows: 50% 50%;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "cta names"
-    "result names";
-}
-
-.container > div {
-  align-items: center;
+.flex-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .cta {
-  grid-area: cta;
-}
-
-.result {
-  grid-area: result;
-}
-
-.names {
-  grid-area: names;
+  text-align: center;
 }
 
 .cta button {
@@ -63,31 +41,46 @@ a:visited {
   width: 14rem;
 }
 
+.result {
+  height: 3rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
 .result div:last-child {
   font-size: xx-large;
   font-weight: bold;
-  margin-top: 1rem;
 }
 
-.names ul {
-  padding: 0;
+.names {
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  margin-top: 2rem;
+  width: 25vw;
 }
 
-.names ul li {
+.names > div {
   align-content: center;
   align-items: center;
   display: flex;
+  margin: 0 1rem;
+  overflow-x: hidden;
+  width: 200px;
+}
+
+.names > div > div:first-child {
   font-size: 22px;
-  gap: 6px;
-  list-style: none;
 }
 
-.names ul li div a {
-  margin: 0;
-  padding: 0;
+.names > div > div {
+  margin-right: 0.25rem;
 }
 
-.names ul li div a img {
+.names > div > div img {
   height: 14px;
   width: 14px;
 }
