@@ -59,7 +59,7 @@ a:visited {
   flex-wrap: wrap;
   height: 100%;
   margin-top: 2rem;
-  width: 25vw;
+  width: 70rem;
 }
 
 .names > div {
@@ -67,8 +67,8 @@ a:visited {
   align-items: center;
   display: flex;
   margin: 0 1rem;
-  overflow-x: hidden;
-  width: 200px;
+  /* width: 230px; */
+  width: 20rem;
 }
 
 .names > div > div:first-child {
